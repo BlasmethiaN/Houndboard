@@ -1,6 +1,7 @@
 module Main where
 
-import Lib
+import Houndboard.Config
 
 main :: IO ()
-main = someFunc
+main = do
+  print =<< findConfigFile
