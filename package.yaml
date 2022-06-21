@@ -21,11 +21,17 @@ description:         Please see the README on GitHub at <https://github.com/gith
 
 dependencies:
 - base >= 4.7 && < 5
+- aeson
 - brick
 - directory
+- filepath
 - microlens-platform
+- optparse-applicative
+- sdl2
+- sdl2-mixer
 - text
 - text-show
+- transformers
 - xdg-basedir
 
 ghc-options:
@@ -35,7 +41,7 @@ library:
   source-dirs: src
 
 executables:
-  Houndboard-exe:
+  hound:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
@@ -46,7 +52,7 @@ executables:
     - Houndboard
 
 tests:
-  Houndboard-test:
+  houndboard-test:
     main:                Spec.hs
     source-dirs:         test
     ghc-options:
